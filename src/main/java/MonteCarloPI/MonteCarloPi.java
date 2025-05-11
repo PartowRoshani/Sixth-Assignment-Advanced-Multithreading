@@ -33,8 +33,17 @@ public class MonteCarloPi {
     // Monte Carlo Pi Approximation without threads
     public static double estimatePiWithoutThreads(long numPoints)
     {
+        long InsideCirclePoints = 0;
+        for(long i = 0 ; i < numPoints ; i++){
+            double x = Math.random();
+            double y = Math.random();
+            if(Math.pow(x , 2.0)+Math.pow(y , 2.0) <= 1.0){
+                InsideCirclePoints++;
+            }
+        }
+
         // TODO: Implement this method to calculate Pi using a single thread
-        return 0;
+        return (InsideCirclePoints * 4.0) /numPoints;
     }
 
     // Monte Carlo Pi Approximation with threads
