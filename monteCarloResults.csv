@@ -1,0 +1,5 @@
+Method,Estimated Pi,Time (ms)
+Single Thread,3.1416128,35693
+Multi Thread,3.14120256,0
+Single Thread,3.14184928,60027
+Multi Thread,0.0,0
